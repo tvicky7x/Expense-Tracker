@@ -52,6 +52,7 @@ function addExpense(e) {
 function clearExpense(e) {
   if (e.target.classList.contains("delete")) {
     let li = e.target.parentNode;
+    localStorage.removeItem(li.id);
     expenseList.removeChild(li);
   }
 }
@@ -65,6 +66,7 @@ function editExpense(e) {
     document.getElementById("expenseName").value = expenseObj.expenseName;
     document.getElementById("expenseCategory").value =
       expenseObj.expenseCategory;
+    localStorage.removeItem(li.id);
     expenseList.removeChild(li);
   }
 }
