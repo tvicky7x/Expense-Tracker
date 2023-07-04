@@ -2,7 +2,7 @@
 // submit button event
 let submit = document.getElementById("submit");
 submit.addEventListener("click", addExpense);
-// delet event
+// delete event
 let expenseList = document.getElementById("expenseList");
 expenseList.addEventListener("click", clearExpense);
 expenseList.addEventListener("click", editExpense);
@@ -33,7 +33,7 @@ function addExpense(e) {
   edit.className = "btn btn-warning btn-sm me-2 float-end edit fw-semibold";
   edit.appendChild(document.createTextNode("EDIT"));
   li.appendChild(edit);
-  // catogory btn
+  // category btn
   let categoryBtn = document.createElement("button");
   categoryBtn.className = "btn btn-outline-primary btn-sm float-end me-2";
   categoryBtn.appendChild(document.createTextNode(expenseCategory));
